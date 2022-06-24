@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="./css/dashboard.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/piechart.js"></script>
+    <script src="js/stackchart1.js"></script>
+    <script src="js/stackchart2.js"></script>
+    <script src="js/stackchart3.js"></script>
+    <script src="js/candlestick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ 
+ 
+</head>
+<body>
+    <div class="container-fluid row">
+      <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-1 col1 ">
+                <div class="card">
+                    <div class="card-body navbar navbar-expand-sm " style="position:fixed ;margin-top:210px;">
+                                <ul class="navbar-nav d-grid">
+                                    <li class="nav-item "><a class="nav-link active " href="#"><span class="fa fa-fw fa fa-columns"></span></a></li>
+                                    <li class="nav-item "><a class="nav-link" href="#"><span class="fa fa-fw fa-suitcase"></span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-fw fa-arrows-h"></span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-fw fa-square"></span></a></li>
+                                </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 my-2 col2">
+                <div class="row m-2">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body d-flex shadow">
+                                <p class="h5"><span class="fa fa-info-circle text-info"></span> Not Connected</p>
+                                <p class="h5" style="margin-left: 210px;">Trial Subscription - 7 more days left 
+                                    <button class="btn btn-light btn-outline-primary">Renew Subscription</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-2">
+                    <div class="col-sm-5">
+                        <div class="card">
+                            <div class="card-body p-4 shadow">
+                            <p class="h5">
+                                <span class="column col fa fa-window-maximize text-info"></span>
+                                 Balance
+                            <br>
+                            <p class="h5 mt-4">$25,200.97</p>
+                            <div class="h6 mt-3" id="bal"><p class="text-secondary">
+                                <span>&darr;  Invested<span><br>
+                                <span class="text-dark h6">$10,458.00</span><br>
+
+                                <span>&uarr;  Profit</span><br>
+                                <span class="text-dark h6">+60%</span><br>
+
+                                <span>&uarr; USD Profit</span><br>
+                                <span class="text-dark h6">$15,648.38</span>
+                            </p></div>
+                                <button class="btn btn-light btn-outline-primary mt-4">Add Exchange</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-7" >
+                        <div class="card">
+                            <div class="card-body shadow">
+                                <div id="piechart">
+
+                                </div>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-2">
+                    <div class="col-sm-4">
+                        <div class="card" >
+                            <div class="card-body shadow">
+                                <p class="h5"><span class="fa fa-fw fa-suitcase text-info"></span>Portfolio1</p>
+                                <div id="chart1">
+
+                                </div>
+                            </div>
+                         
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body shadow">
+                                <p class="h5"><span class="fa fa-fw fa-suitcase text-info"></span>Portfolio2</p>
+                                <div id="chart2">
+
+                                </div>       
+                            </div>               
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body shadow">
+                                <p class="h5"><span class="fa fa-fw fa-suitcase text-info"></span>Portfolio3</p>
+                                <div id="chart3">
+
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="card m-2">
+                            <div class="card-body shadow">
+                               <p class="h5"> <span class="fa fa-line-chart text-info"></span> Chart</p>
+                                <div id="chart4">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                           <div class="card m-2 ">
+                              <div class="card-body shadow">
+                                  <div class="row mt-2">
+                                    <p class="h4 col-sm-8" >&lrhar;Transactions</p>
+                                    <button class="btn  btn-light text-primary col-sm-4" style="background-color:#ddd">See All</button>
+                                  </div>
+                                  <div class="row mt-4">
+                                    <p class="h5 col-sm-8"><span class="text-primary circle p-2 m-2">&darr;</span>Buy<br><br><span class="text-secondary">$250.00</span></p>
+                                    <p class="h5 col-sm-4 text-secondary">Apri 20,2020</p>
+                                  </div>
+                                  <div class="row mt-4">
+                                    <p class="h5 col-sm-8"><span class="text-primary circle p-2 m-2">&uarr;</span>Sell<br><br><span class="text-secondary">$250.00</span></p>
+                                    <p class="h5 col-sm-4 text-secondary">Apri 16,2020</p>
+                                  </div>
+                                  <div class="row mt-4">
+                                    <p class="h5 col-sm-8"><span class="text-primary circle p-2 m-2">&uarr;</span>Sell<br><br><span class="text-secondary">$250.00</span></p>
+                                    <p class="h5 col-sm-4 text-secondary">Apri 16,2020</p>
+                                  </div>
+                              </div>
+                    
+                           </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 col3 ">
+                <div class="card">
+                   
+                    <div class="card-body ">
+                            <img class="rounded-circle img-fluid col-md-6" id="img">
+                            <div class=" h6">Good Morning,Akash! <span class="btn btn-light text-primary">Settings</span> </div>
+                        <hr/>
+                            <p class="h5">Recent activity</p>
+                            <p class="h6">
+                                1,873 USD=0.84 BTC <br>
+                                <span class="text-secondary">1BTC = 8,848 USD</span>
+                            </p>
+                            <p class="h6">
+                                1,873 USD=0.84 BTC <br>
+                                <span class="text-secondary">1BTC = 8,848 USD</span>
+                            </p>
+                            <p class="h6">
+                                1,873 USD=0.84 BTC <br>
+                                <span class="text-secondary">1BTC = 8,848 USD</span>
+                            </p>
+                        <hr/>
+                        <div class=" card-text h6">Exchange 
+                            <select class="btn btn-light text-primary " id="exchng" style="background-color:#ddd;">
+                                <option value="usd">USD</option>
+                                <option value="btc">BTC</option>
+                            </select>
+
+                            <input type="text" id="amt1" class="form-control mt-3" value="1,700.00 USD"><br>
+                            <input type="text" id="amt2" class="form-control" value="0.644931 BTC"><br>
+                        </div>
+                        <div class= "container-fluid bg-primary p-3 text-white mt-5 rounded ">
+                            <img class="img-fluid" src="./images/email.webp" id="eml"><br>    
+                            <p>Invite Customers And get $10 for Each
+                            <button class="btn btn-outline-light ">Send Invitation</button></p>
+                        </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        var img = document.getElementById("img");
+        img.setAttribute("src","./images/crd1.jpg");
+        var chart = new ApexCharts(document.querySelector("#piechart"), piechart);
+           chart.render();
+         var ch1 = new ApexCharts(document.querySelector("#chart1"), stackchart1);
+        ch1.render();
+        var ch2 = new ApexCharts(document.querySelector("#chart2"), stackchart2);
+        ch2.render();
+        var ch3 = new ApexCharts(document.querySelector("#chart3"), stackchart3);
+         ch3.render();
+        var ch4 = new ApexCharts(document.querySelector("#chart4"), candlestick);
+        ch4.render();
+    </script>
+</body>
+</html>
